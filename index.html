@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="book.png">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="book.png" alt="Logo" class="logo">
+        <h1>GK Quiz</h1>
+        <div class="team-info">
+            <span id="team-name-display">Team Name</span>
+            <button id="edit-team-name">Edit</button>
+        </div>
+    </header>
+
+    <!-- Team Name Modal -->
+    <div id="team-modal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Team Name</h2>
+            <input type="text" id="team-name-input" placeholder="Team Name">
+            <button id="save-team-name">Save</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Select a Category:</h2>
+        <form id="category-form">
+            <select id="category" name="category">
+                <option value="FOOD AND CUISINES">FOOD AND CUISINES</option>
+                <option value="SPORTS">SPORTS</option>
+                <option value="ENTERTAINMENT">ENTERTAINMENT</option>
+                <option value="TECHNOLOGY">TECHNOLOGY</option>
+                <option value="RIDDLES">RIDDLES</option>
+            </select>
+            <button type="button" id="start-quiz">Start Quiz</button>
+        </form>
+        
+        <div id="quiz-container" style="display:none;">
+            <!-- Quiz questions will be dynamically generated here -->
+        </div>
+
+        <div id="timer" style="display:none;">25:00</div>
+        <div id="result"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

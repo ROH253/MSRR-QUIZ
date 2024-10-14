@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #62fbdd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Changed to column to accommodate header */
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 70px; /* Adjust based on header height */
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Ensure header stays on top */
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.team-info {
+    display: flex;
+    align-items: center;
+}
+
+#team-name-display {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#edit-team-name {
+    background-color: #fc68ff;
+    color: white;
+    padding: 5px 10px ;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 2rem;
+}
+
+#edit-team-name:hover {
+    background-color: #b30083;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.modal-content input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #218838;
+}
+
+/* Container */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    height: 90vh;
+    overflow-y: auto; /* Ensure content is scrollable if it exceeds height */
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Dropdown and Button */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    outline: none;
+    width: 60%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Quiz Container */
+#quiz-container {
+    max-height: 350px;
+    overflow-y: auto; 
+    border: 1px solid #ccc;
+    padding: 10px; 
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Quiz Question Container */
+.question-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.question-container h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Timer */
+#timer {
+    font-size: 24px;
+    color: #e63946;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Result */
+#result {
+    font-size: 20px;
+    color: #28a745;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+    
+    #team-name-display {
+        max-width: 100px;
+    }
+    
+    select {
+        width: 80%;
+    }
+    
+    .modal-content {
+        width: 90%;
+    }
+}
